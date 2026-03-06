@@ -1,0 +1,51 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.buttonPortal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color(primary);
+  color: #fff;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color $base-duration ease-out,
+    opacity $base-duration ease-out;
+  @include mq-pc {
+    gap: 0 vw(8);
+    padding: vw(8) vw(24);
+    font-size: vw(14);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid color(primary);
+    outline-offset: 2px;
+  }
+}
+
+.buttonPortal__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  @include mq-pc {
+    width: vw(10.5);
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

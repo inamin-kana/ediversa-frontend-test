@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* base
+============================================================= */
+$base-duration: 0.25s;
+$base-font-size: 16;
+$base-font-size-sp: 16;
+$base-line-height: 1.8;
+$base-line-height-sp: 1.8;
+$break-small: 767px;
+$pc-pdg: 24;
+$sp-pdg: 16;
+
+/* Canvas Size
+============================================================= */
+$pc-basis: 1280;
+$sp-basis: 390;
+
+/* Contents Width
+============================================================= */
+$pc-contents: 1232;
+
+/* PC Responsive Width
+============================================================= */
+$max-basis: 1566px;
+$min-basis: 768px;
+
+/* Color
+============================================================= */
+$color: (
+  main: #0f172a,
+  primary: #1754cf,
+  secondary: #e2e8f0,
+  bg-gray1: #f6f6f8,
+  text-gray1: #475569,
+  text-gray2: #6b7280,
+  text-gray3: #64748b,
+  text-gray4: #94a3b8,
+  text-gray5: #f8fafc,
+  text-blue1: #cbd5e1,
+);
+// F1F5F9
+
+/* CSS Custom Properties
+========================================================================== */
+:root {
+  --zoom-level: 1;
+  --base-pc: #{$pc-basis};
+  --base-sp: #{$sp-basis};
+  --base-min: 768;
+  --base-max: 1566;
+  --pc-size: var(--base-pc);
+  --sp-size: var(--base-sp);
+}

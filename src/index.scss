@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@use "./styles/variables" as *;
+@use "./styles/global" as *;
+
+@import "normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* reset============================================================= */
+:where(
+  html,
+  body,
+  div,
+  span,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  abbr,
+  address,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  samp,
+  small,
+  strong,
+  sub,
+  sup,
+  var,
+  b,
+  i,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video
+) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+:where(body) {
+  line-height: 1;
+}
+:where(
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section
+) {
+  display: block;
+}
+:where(ul) {
+  list-style: none;
+}
+:where(blockquote, q) {
+  quotes: none;
+}
+:where(blockquote:before, blockquote:after, q:before, q:after) {
+  content: none;
+}
+:where(a) {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+:where(ins) {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+:where(mark) {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+:where(del) {
+  text-decoration: line-through;
+}
+:where(abbr[title], dfn[title]) {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+:where(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:where(hr) {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+:where(input, select) {
+  vertical-align: middle;
+}
+
+/* Base styles
+============================================================= */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $base-line-height;
+  // letter-spacing: -0.02em;
+  color: color(text);
+  background-color: #eee;
+}
+
+a {
+  color: color(text);
+}

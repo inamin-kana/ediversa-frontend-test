@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: color(text-gray5);
+  border: 1px solid color(secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  @include mq-pc {
+    padding: vw(10.5) vw(12);
+    width: vw(256);
+    gap: 0 vw(18.5);
+  }
+
+  &:focus-within {
+    border-color: color(primary);
+    box-shadow:
+      0 2px 5px rgba(color(text-gray4), 0.4),
+      0 0 0 2px rgba(color(text-gray1), 0.2);
+  }
+}
+
+.searchBox__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  @include mq-pc {
+    width: vw(10.5);
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.searchBox input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  @include mq-pc {
+    font-size: vw(14);
+  }
+
+  &::placeholder {
+    color: color(text-gray2);
+  }
+  &:focus {
+    outline: none;
+  }
+}

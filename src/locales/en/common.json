@@ -1,0 +1,18 @@
+{
+  "header": {
+    "title": "UNIVERSITY OF HEALTH",
+    "subtitle": "Faculty of Medicine",
+    "logoAlt": "logo",
+    "nav": {
+      "about": "About",
+      "programs": "Programs",
+      "research": "Research",
+      "faculty": "Faculty",
+      "contact": "Contact"
+    },
+    "searchPlaceholder": "Search faculty...",
+    "searchIconAlt": "search",
+    "portal": "Portal",
+    "portalAriaLabel": "Portal (opens in a new tab)"
+  }
+}
