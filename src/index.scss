@@ -171,3 +171,16 @@ body {
 a {
   color: color(text);
 }
+
+.section {
+  .section__inner {
+    max-width: $max-basis;
+    margin: 0 auto;
+    @include mq-pc() {
+      padding: 0 vw($pc-pdg);
+    }
+    @include mq-sp() {
+      padding: 0 #{$sp-pdg}px;
+    }
+  }
+}

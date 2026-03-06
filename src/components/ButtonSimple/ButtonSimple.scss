@@ -1,0 +1,59 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.buttonSimple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color $base-duration ease,
+    border-color $base-duration ease,
+    opacity $base-duration ease;
+  @include mq-pc {
+    padding: vw(12) vw(32);
+    font-size: vw(16);
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
+  @include mq-sp {
+    padding: 17px;
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid color(primary);
+    outline-offset: 2px;
+  }
+}
+
+.buttonSimple--primary {
+  background-color: color(primary);
+  color: #fff;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.buttonSimple--secondary {
+  background-color: #fff;
+  color: color(main);
+  border: 1px solid color(secondary);
+
+  &:hover {
+    border-color: color(text-gray4);
+    opacity: 0.8;
+  }
+}

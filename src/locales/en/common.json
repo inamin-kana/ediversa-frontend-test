@@ -14,5 +14,14 @@
     "searchIconAlt": "search",
     "portal": "Portal",
     "portalAriaLabel": "Portal (opens in a new tab)"
+  },
+  "heroSection": {
+    "label": "EST. 1924 • GLOBAL EXCELLENCE",
+    "title": "Advancing the <0>Future</0> of Medicine",
+    "description": "Our mission is to improve human health through innovative education, groundbreaking research, and compassionate clinical care. Join a global community dedicated to medical excellence.",
+    "descriptionSp": "Dedicated to academic excellence and pioneering medical research that transforms global healthcare through innovation and compassion.",
+    "buttonExplorePrograms": "Explore Programs",
+    "buttonResearchPortal": "Research Portal",
+    "imageAlt": "Hero image"
   }
 }
