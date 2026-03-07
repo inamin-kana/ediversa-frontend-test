@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { SearchIcon } from "../Icons";
 import "./SearchBox.scss";
 
 export default function SearchBox() {
@@ -7,7 +8,7 @@ export default function SearchBox() {
   return (
     <div className="searchBox">
       <span className="searchBox__icon">
-        <img src="/src/assets/img/icon-search.svg" alt={t("header.searchIconAlt")} />
+        <SearchIcon className="searchBox__icon icon-svg" />
       </span>
       <input type="text" placeholder={t("header.searchPlaceholder")} />
     </div>

@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { LogoutIcon } from "../Icons";
 import "./ButtonPortal.scss";
 
 export default function ButtonPortal() {
@@ -13,7 +14,7 @@ export default function ButtonPortal() {
       aria-label={t("header.portalAriaLabel")}
     >
       <span className="buttonPortal__icon">
-        <img src="/src/assets/img/icon-portal.svg" alt={t("header.portal")} />
+        <LogoutIcon className="buttonPortal__icon icon-svg" />
       </span>
       {t("header.portal")}
     </a>

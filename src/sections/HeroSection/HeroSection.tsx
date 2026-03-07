@@ -8,7 +8,10 @@ export default function HeroSection() {
   const { t } = useTranslation("common");
 
   return (
-    <div className="HeroSection section">
+    <section
+      className="HeroSection section"
+      aria-labelledby="hero-section-heading"
+    >
       <div className="HeroSection__inner section__inner">
         <div className="HeroSection__body">
           <span className="HeroSection__label">{t("heroSection.label")}</span>
@@ -39,6 +42,6 @@ export default function HeroSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

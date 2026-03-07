@@ -1,0 +1,134 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.featuredProfessors {
+  @include mq-pc {
+    padding: vw(80) 0;
+  }
+  @include mq-sp {
+    padding: 64px 0;
+  }
+
+  .featuredProfessors__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featuredProfessors__headed {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include mq-sp {
+      display: contents;
+    }
+  }
+
+  .featuredProfessors__title-wrapper {
+    flex: 1;
+    min-width: 0;
+    @include mq-pc {
+      max-width: vw(400);
+    }
+  }
+
+  .featuredProfessors__title {
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    @include mq-pc {
+      font-size: vw(30);
+      font-weight: 700;
+    }
+    @include mq-sp {
+      font-size: 30px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+  }
+
+  .featuredProfessors__subtitle {
+    margin: 0;
+    color: color(text-gray3);
+    line-height: 1.4;
+    @include mq-pc {
+      font-size: vw(16);
+    }
+    @include mq-sp {
+      font-size: 16px;
+    }
+
+    * + & {
+      @include mq-sp {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .featuredProfessors__subtitle-sp {
+    @include mq-pc {
+      display: none;
+    }
+  }
+
+  .featuredProfessors__subtitle-pc {
+    @include mq-sp {
+      display: none;
+    }
+  }
+
+  .featuredProfessors__viewAll {
+    @include mq-pc {
+      margin-bottom: vw(10);
+    }
+    @include mq-sp {
+      order: 1;
+      margin-left: auto;
+      margin-top: 80px;
+    }
+  }
+
+  .featuredProfessors__viewAll-pc {
+    @include mq-sp {
+      display: none;
+    }
+  }
+
+  .featuredProfessors__viewAll-sp {
+    @include mq-pc {
+      display: none;
+    }
+    @include mq-sp {
+      display: inline;
+      text-transform: uppercase;
+    }
+  }
+
+  .featuredProfessors__grid {
+    display: grid;
+    @include mq-pc {
+      gap: vw(32);
+      margin-top: vw(36);
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include mq-sp {
+      margin-top: 74px;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      & > * {
+        &:nth-of-type(1) {
+          order: 3;
+        }
+        &:nth-of-type(2) {
+          order: 2;
+        }
+        &:nth-of-type(3) {
+          order: 1;
+        }
+        &:nth-of-type(4) {
+          order: 4;
+        }
+      }
+    }
+  }
+}

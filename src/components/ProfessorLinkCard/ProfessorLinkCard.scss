@@ -1,0 +1,138 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.professorLinkCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  @include mq-sp {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+
+  &:hover .professorLinkCard__image img {
+    transform: scale(1.05);
+  }
+
+  .professorLinkCard__image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    @include mq-sp {
+      order: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform $base-duration ease-in-out;
+    }
+  }
+
+  .professorLinkCard__body {
+    display: flex;
+    flex-direction: column;
+    @include mq-pc {
+      margin-top: vw(24);
+    }
+    @include mq-sp {
+      margin-top: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid color(border-gray1);
+    }
+  }
+
+  .professorLinkCard__name {
+    color: color(main);
+    font-weight: 700;
+    line-height: 1.6;
+    @include mq-pc {
+      font-size: vw(18);
+    }
+    @include mq-sp {
+      font-size: 20px;
+      margin-top: 6px;
+    }
+  }
+
+  .professorLinkCard__jobTitle {
+    color: color(primary);
+    @include mq-pc {
+      font-size: vw(14);
+      font-weight: 600;
+    }
+    @include mq-sp {
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      order: -1;
+    }
+  }
+
+  .professorLinkCard__description {
+    margin: 0;
+    color: color(text-gray1);
+    @include mq-pc {
+      margin-top: vw(9);
+      font-size: vw(14);
+      line-height: 1.6;
+    }
+    @include mq-sp {
+      margin-top: 8.5px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  .professorLinkCard__label {
+    color: color(main);
+    transition: color $base-duration ease;
+    @include mq-pc {
+      font-size: vw(16);
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      padding-top: vw(14);
+    }
+    @include mq-sp {
+      width: 100%;
+      display: flex;
+      align-self: start;
+      justify-content: space-between;
+      color: color(primary);
+      font-size: 12px;
+      padding-top: 16px;
+      font-weight: 900;
+      line-height: 1.6;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .arrow-icon {
+      @include mq-pc {
+        display: none;
+      }
+      @include mq-sp {
+        // display: block;
+        width: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover .professorLinkCard__label {
+    color: color(primary);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid color(primary);
+    outline-offset: 2px;
+  }
+}
