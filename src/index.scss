@@ -194,3 +194,19 @@ a {
   height: 100%;
   object-fit: contain;
 }
+
+/* Others
+============================================================= */
+.sp-only {
+  display: none;
+  @include mq-sp() {
+    display: block;
+  }
+}
+
+.pc-only {
+  display: block;
+  @include mq-sp() {
+    display: none;
+  }
+}

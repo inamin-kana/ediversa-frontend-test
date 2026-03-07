@@ -1,0 +1,208 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.publicationCard {
+  display: flex;
+  flex-direction: column;
+  @include mq-pc {
+  }
+  @include mq-sp {
+    border-top: 1px solid color(secondary);
+    padding: 24px;
+
+    &:first-child {
+      padding: 32px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .publicationCard__head {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: color(text-gray4);
+    @include mq-pc {
+      font-size: vw(12);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    @include mq-sp {
+      font-size: 10px;
+      font-weight: 900;
+    }
+  }
+
+  @at-root .publicationCard:first-child .publicationCard__head {
+    @include mq-sp {
+      color: color(primary);
+    }
+  }
+
+  .publicationCard__date {
+    text-transform: uppercase;
+  }
+
+  .publicationCard__department {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    @include mq-pc {
+      gap: 0 vw(16);
+      margin-left: vw(16);
+    }
+    @include mq-sp {
+      gap: 0 4px;
+      margin-left: 4px;
+      letter-spacing: 0.08em;
+    }
+
+    &::before {
+      content: "•";
+      color: color(text-blue1);
+      @include mq-pc {
+      }
+      @include mq-sp {
+        color: color(text-gray4);
+      }
+    }
+
+    @at-root .publicationCard:first-child .publicationCard__department {
+      @include mq-sp {
+        gap: 0 16px;
+        margin-left: 16px;
+        &::before {
+          color: color(primary);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .publicationCard__title {
+    margin: 0;
+    color: color(main);
+    font-weight: 700;
+    @include mq-pc {
+      min-height: vw(110);
+      font-size: vw(20);
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+      margin-top: vw(16);
+    }
+    @include mq-sp {
+      font-size: 16px;
+      line-height: 1.3;
+      margin-top: 8px;
+    }
+
+    @at-root .publicationCard:first-child .publicationCard__title {
+      @include mq-sp {
+        font-size: 24px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .publicationCard__authors {
+    margin: 0;
+    color: color(text-gray3);
+    @include mq-pc {
+      min-height: vw(48);
+      font-size: vw(14);
+    }
+    @include mq-sp {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    @at-root .publicationCard:first-child .publicationCard__authors {
+      @include mq-sp {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .publicationCard__description {
+    color: color(text-gray1);
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+    @include mq-pc {
+      min-height: vw(68);
+      font-size: vw(14);
+      margin-top: vw(8);
+    }
+    @include mq-sp {
+      display: none;
+    }
+
+    & + .publicationCard__link {
+      @include mq-pc {
+        margin-top: vw(16);
+      }
+      @include mq-sp {
+        margin-top: 8px;
+      }
+    }
+
+    @at-root .publicationCard:first-child .publicationCard__description {
+      @include mq-sp {
+        display: block;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .publicationCard__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    color: color(primary);
+    text-decoration: none;
+    transition: opacity $base-duration ease;
+    @include mq-pc {
+      width: fit-content;
+      font-size: vw(14);
+      font-weight: 700;
+    }
+    @include mq-sp {
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid color(primary);
+      outline-offset: 2px;
+    }
+
+    @at-root .publicationCard:first-child .publicationCard__link {
+      @include mq-sp {
+        width: fit-content;
+        font-size: 12px;
+        border: 1px solid color(primary);
+        border-radius: 4px;
+        padding: 9px 24px;
+        line-height: 1;
+
+        margin-top: 34px;
+      }
+    }
+  }
+
+  .publicationCard__linkIcon {
+    display: inline-flex;
+    flex-shrink: 0;
+    @include mq-sp {
+      display: none;
+    }
+  }
+}

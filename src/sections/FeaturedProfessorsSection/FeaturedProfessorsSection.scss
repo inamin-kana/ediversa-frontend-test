@@ -23,60 +23,6 @@
     }
   }
 
-  .featuredProfessors__title-wrapper {
-    flex: 1;
-    min-width: 0;
-    @include mq-pc {
-      max-width: vw(400);
-    }
-  }
-
-  .featuredProfessors__title {
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    @include mq-pc {
-      font-size: vw(30);
-      font-weight: 700;
-    }
-    @include mq-sp {
-      font-size: 30px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -0.03em;
-      white-space: nowrap;
-    }
-  }
-
-  .featuredProfessors__subtitle {
-    margin: 0;
-    color: color(text-gray3);
-    line-height: 1.4;
-    @include mq-pc {
-      font-size: vw(16);
-    }
-    @include mq-sp {
-      font-size: 16px;
-    }
-
-    * + & {
-      @include mq-sp {
-        margin-top: 8px;
-      }
-    }
-  }
-
-  .featuredProfessors__subtitle-sp {
-    @include mq-pc {
-      display: none;
-    }
-  }
-
-  .featuredProfessors__subtitle-pc {
-    @include mq-sp {
-      display: none;
-    }
-  }
-
   .featuredProfessors__viewAll {
     @include mq-pc {
       margin-bottom: vw(10);
@@ -86,21 +32,11 @@
       margin-left: auto;
       margin-top: 80px;
     }
-  }
 
-  .featuredProfessors__viewAll-pc {
-    @include mq-sp {
-      display: none;
-    }
-  }
-
-  .featuredProfessors__viewAll-sp {
-    @include mq-pc {
-      display: none;
-    }
-    @include mq-sp {
-      display: inline;
-      text-transform: uppercase;
+    & + * {
+      @include mq-sp {
+        text-transform: uppercase;
+      }
     }
   }
 

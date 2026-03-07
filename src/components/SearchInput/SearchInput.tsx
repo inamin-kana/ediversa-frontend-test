@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SearchIcon } from "../Icons";
-import "./SearchBox.scss";
+import "./SearchInput.scss";
 
 export default function SearchBox() {
   const { t } = useTranslation("common");

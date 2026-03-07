@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.section__title-wrapper {
+  flex: 1;
+  min-width: 0;
+  @include mq-pc {
+    max-width: vw(400);
+  }
+}
+
+.section__title {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: color(main);
+  @include mq-pc {
+    font-size: vw(30);
+    font-weight: 700;
+  }
+  @include mq-sp {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+  }
+}
+
+.section__subtitle {
+  margin: 0;
+  color: color(text-gray3);
+  line-height: 1.4;
+  @include mq-pc {
+    font-size: vw(16);
+  }
+  @include mq-sp {
+    font-size: 16px;
+  }
+
+  * + & {
+    @include mq-sp {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.latestResearch {
+  @include mq-pc {
+    padding: vw(80) 0 vw(128);
+  }
+  @include mq-sp {
+    padding: 32px 0;
+  }
+
+  .latestResearch__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__title-wrapper {
+    @include mq-sp {
+      padding-bottom: 26px;
+      border-bottom: 1px solid color(secondary);
+    }
+  }
+
+  .latestResearch__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include mq-sp {
+      display: contents;
+    }
+  }
+
+  .latestResearch__viewAll {
+    flex-shrink: 0;
+    @include mq-pc {
+      margin-bottom: vw(16);
+    }
+    @include mq-sp {
+      order: 1;
+      margin-left: auto;
+      margin-top: 80px;
+    }
+  }
+
+  .latestResearch__list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include mq-pc {
+      margin-top: vw(24);
+      gap: vw(64) vw(48);
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq-sp {
+      margin-top: 48px;
+      gap: 0;
+      grid-template-columns: 1fr;
+      background-color: #fff;
+      border: 1px solid color(secondary);
+      border-radius: 8px;
+    }
+  }
+}

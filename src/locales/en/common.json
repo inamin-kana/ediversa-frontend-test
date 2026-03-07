@@ -27,8 +27,21 @@
     "title": "Featured Professors",
     "subtitle": "Leading experts at the forefront of medical discovery.",
     "subtitleSp": "World-class educators and clinicians leading our departments.",
-    "textLinkLabelPc": "View All Faculty",
-    "textLinkLabelSp": "Faculty Directory",
+    "textLinkLabel": "View All Faculty",
     "viewProfile": "View Profile"
+  },
+  "latestResearch": {
+    "title": "Latest Research & Publications",
+    "subtitle": "",
+    "subtitleSp": "New findings published by our researchers in top-tier journals.",
+    "viewAllPublications": "View All Publications",
+    "readFullPaper": "Read Full Paper"
+  },
+  "innovatingSection": {
+    "title": "Innovating Through Research",
+    "description": "Our state-of-the-art facilities provide the foundation for next-generation medical breakthroughs. From level-4 biocontainment labs to advanced genomic sequencing suites, we empower our faculty to push boundaries.",
+    "descriptionSp": "Our state-of-the-art facilities provide the foundation for breakthroughs that redefine what's possible in medicine. Join a community of thinkers, healers, and pioneers.",
+    "buttonText": "Learn About Our Facilities",
+    "imageAlt": "Innovating Banner image"
   }
 }

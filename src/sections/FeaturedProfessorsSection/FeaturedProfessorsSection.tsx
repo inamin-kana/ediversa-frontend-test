@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { featuredProfessors } from "../../data/featuredProfessors";
 import ProfessorLinkCard from "../../components/ProfessorLinkCard/ProfessorLinkCard";
 import ArrowTextLink from "../../components/ArrowTextLink/ArrowTextLink";
+import TitleSection from "../../components/TitleSection/TitleSection";
 import "./FeaturedProfessorsSection.scss";
 
 export default function FeaturedProfessorsSection() {
@@ -14,24 +15,13 @@ export default function FeaturedProfessorsSection() {
     >
       <div className="featuredProfessors__inner section__inner">
         <div className="featuredProfessors__headed">
-          <div className="featuredProfessors__title-wrapper">
-            <h2 className="featuredProfessors__title">
-              {t("featuredProfessors.title")}
-            </h2>
-            <p className="featuredProfessors__subtitle featuredProfessors__subtitle-pc">
-              {t("featuredProfessors.subtitle")}
-            </p>
-            <p className="featuredProfessors__subtitle featuredProfessors__subtitle-sp">
-              {t("featuredProfessors.subtitleSp")}
-            </p>
-          </div>
+          <TitleSection
+            title={t("featuredProfessors.title")}
+            subtitle={t("featuredProfessors.subtitle")}
+            subtitleSp={t("featuredProfessors.subtitleSp")}
+          />
           <ArrowTextLink href="#" className="featuredProfessors__viewAll">
-            <span className="featuredProfessors__viewAll-pc">
-              {t("featuredProfessors.textLinkLabelPc")}
-            </span>
-            <span className="featuredProfessors__viewAll-sp">
-              {t("featuredProfessors.textLinkLabelSp")}
-            </span>
+            {t("featuredProfessors.textLinkLabel")}
           </ArrowTextLink>
         </div>
         <div className="featuredProfessors__grid">

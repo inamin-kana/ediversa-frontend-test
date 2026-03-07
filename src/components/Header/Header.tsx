@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ButtonPortal from "../ButtonPortal/ButtonPortal";
-import SearchBox from "../SearchBox/SearchBox";
+import SearchBox from "../SearchInput/SearchInput";
 import "./Header.scss";
 
 export default function Header() {
