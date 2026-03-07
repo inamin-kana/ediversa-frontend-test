@@ -43,5 +43,13 @@
     "descriptionSp": "Our state-of-the-art facilities provide the foundation for breakthroughs that redefine what's possible in medicine. Join a community of thinkers, healers, and pioneers.",
     "buttonText": "Learn About Our Facilities",
     "imageAlt": "Innovating Banner image"
+  },
+  "requestInfoSection": {
+    "title": "Request Information",
+    "description": "Interested in our programs or partnering with our research teams? Reach out to our admissions and administration office.",
+    "addressLabel": "Academic Campus",
+    "address": "123 Medical Plaza, University District\nBoston, MA 02115",
+    "emailLabel": "General Admissions",
+    "email": "admissions@university.edut\n+1 (617) 555-0198"
   }
 }

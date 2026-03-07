@@ -1,0 +1,133 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.requestInfoSection {
+  @include mq-pc {
+    padding: vw(96) 0 vw(110);
+  }
+  @include mq-sp {
+    padding: 128px 0 177px;
+  }
+
+  .requestInfoSection__inner {
+    display: flex;
+    @include mq-pc {
+      gap: 0 vw(80);
+    }
+    @include mq-sp {
+      flex-direction: column;
+      gap: 48px 0;
+    }
+  }
+
+  .requestInfoSection__body {
+    @include mq-pc {
+      flex: 1;
+    }
+  }
+
+  .requestInfoSection__title {
+    line-height: 1.2;
+    font-weight: 900;
+    @include mq-pc {
+      font-size: vw(36);
+      letter-spacing: -0.01em;
+    }
+    @include mq-sp {
+      font-size: 30px;
+      letter-spacing: -0.015em;
+      text-transform: uppercase;
+    }
+  }
+
+  .requestInfoSection__description {
+    margin: 0;
+    color: color(text-gray1);
+    line-height: 1.4;
+    @include mq-pc {
+      margin-top: vw(16);
+      font-size: vw(18);
+    }
+    @include mq-sp {
+      margin-top: 26px;
+      font-size: 16px;
+    }
+  }
+
+  .requestInfoSection__infoList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include mq-pc {
+      margin-top: vw(48);
+      display: flex;
+      flex-direction: column;
+      gap: vw(20) 0;
+    }
+    @include mq-sp {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  .requestInfoSection__infoItem {
+    display: flex;
+    @include mq-pc {
+      gap: vw(16);
+      align-items: flex-start;
+    }
+    @include mq-sp {
+      gap: 16px;
+      align-items: center;
+    }
+
+    dt,
+    dd {
+      margin: 0;
+    }
+  }
+
+  .requestInfoSection__infoItemIcon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: color(primary);
+    @include mq-pc {
+      width: vw(40);
+      height: vw(40);
+      background-color: rgba(color(primary), 0.1);
+    }
+  }
+
+  .requestInfoSection__infoItemTitle {
+    font-weight: 700;
+    color: color(main);
+    @include mq-pc {
+      font-size: vw(16);
+      margin-bottom: vw(8);
+    }
+  }
+
+  .requestInfoSection__infoItemDetail {
+    color: color(text-gray1);
+    line-height: 1.5;
+    white-space: pre-line;
+    @include mq-pc {
+      font-size: vw(16);
+    }
+    @include mq-sp {
+      font-size: 14px;
+    }
+  }
+}
+
+.form {
+  @include mq-pc {
+    width: vw(576);
+    background-color: #fff;
+  }
+}

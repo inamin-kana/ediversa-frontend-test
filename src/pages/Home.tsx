@@ -2,6 +2,7 @@ import FeaturedProfessorsSection from "../sections/FeaturedProfessorsSection/Fea
 import HeroSection from "../sections/HeroSection/HeroSection";
 import InnovatingBannerSection from "../sections/InnovatingBannerSection/InnovatingBannerSection";
 import LatestResearchSection from "../sections/LatestResearchSection/LatestResearchSection";
+import RequestInfoSection from "../sections/RequestInfoSection/RequestInfoSection";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <FeaturedProfessorsSection />
       <LatestResearchSection />
       <InnovatingBannerSection />
-      <p className="text-3xl font-bold underline">Hello World</p>
+      <RequestInfoSection />
     </div>
   );
 }
