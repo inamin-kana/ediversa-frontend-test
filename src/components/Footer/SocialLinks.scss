@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.SocialLinks {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  @include mq-pc {
+    gap: 0 vw(16);
+  }
+  @include mq-sp {
+    gap: 0 16px;
+  }
+}
+
+.SocialLinks__item {
+  display: flex;
+  align-items: center;
+  @include mq-sp {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.SocialLinks__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq-pc {
+    path {
+      fill: color(text-gray4);
+    }
+  }
+  @include mq-sp {
+    width: 100%;
+    height: 100%;
+    background-color: color(secondary);
+    border-radius: 50%;
+    svg {
+      width: 12px;
+      height: 100%;
+      path {
+        fill: color(gray1);
+        transition: fill $base-duration ease;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: color(primary);
+      }
+    }
+  }
+}

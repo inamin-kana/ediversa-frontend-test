@@ -1,0 +1,145 @@
+@use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.Footer {
+  background-color: #fff;
+  border-top: 1px solid color(secondary);
+  @include mq-pc {
+    padding: vw(80) 0 vw(48);
+  }
+  @include mq-sp {
+    padding: 64px 0;
+  }
+}
+
+.Footer__inner {
+  max-width: $max-basis;
+  margin: 0 auto;
+  @include mq-pc() {
+    padding: 0 vw($pc-pdg);
+  }
+  @include mq-sp() {
+    padding: 0 #{$sp-pdg}px;
+  }
+}
+
+.Footer__top {
+  display: grid;
+  @include mq-pc {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0 vw(48);
+  }
+  @include mq-sp {
+    grid-template-columns: 1fr;
+    gap: 48px 0;
+  }
+}
+
+.Footer__brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @include mq-pc {
+    gap: vw(21) 0;
+  }
+  @include mq-sp {
+    gap: 24px 12px;
+  }
+}
+
+.Footer__brandLogo {
+  display: block;
+  object-fit: contain;
+  @include mq-pc {
+    width: vw(32);
+    height: vw(32);
+  }
+  @include mq-sp {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.Footer__brandTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  @include mq-pc {
+    font-size: vw(18);
+    margin-left: vw(12);
+  }
+  @include mq-sp {
+    color: color(primary);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.Footer__brandDescription {
+  color: color(text-gray3);
+  line-height: 1.6;
+  @include mq-pc {
+    width: 100%;
+    font-size: vw(14);
+  }
+  @include mq-sp {
+    font-size: 12px;
+  }
+}
+
+.Footer__bottom {
+  border-top: 1px dashed color(text-gray4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @include mq-pc {
+    justify-content: space-between;
+    margin-top: vw(64);
+    padding-top: vw(32);
+    gap: vw(16);
+  }
+  @include mq-sp {
+    margin-top: 64px;
+    padding-top: 32px;
+    justify-content: center;
+  }
+}
+
+.Footer__copyright {
+  color: color(text-gray4);
+  @include mq-pc {
+    font-size: vw(12);
+  }
+  @include mq-sp {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}
+
+.Footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @include mq-pc {
+    gap: 0 vw(24);
+  }
+  @include mq-sp {
+    gap: 0 24px;
+  }
+}
+
+.Footer__legalLink {
+  color: color(text-gray4);
+  text-decoration: none;
+  @include mq-pc {
+    font-size: vw(14);
+    letter-spacing: -0.06em;
+  }
+  @include mq-sp {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

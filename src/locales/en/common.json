@@ -51,5 +51,35 @@
     "address": "123 Medical Plaza, University District\nBoston, MA 02115",
     "emailLabel": "General Admissions",
     "email": "admissions@university.edut\n+1 (617) 555-0198"
+  },
+  "footer": {
+    "brandTitle": "Faculty of Med",
+    "brandDescription": "Excellence in medicine, compassion in care. Dedicated to teaching the next generation of medical leaders since 1924.",
+    "academic": "ACADEMIC",
+    "departments": "DEPARTMENTS",
+    "clinicalServices": "CLINICAL SERVICES",
+    "resources": "RESOURCES",
+    "links": {
+      "undergraduateMd": "Undergraduate MD",
+      "graduateStudies": "Graduate Studies",
+      "medicalEducation": "Medical Education",
+      "globalHealth": "Global Health",
+      "cardiology": "Cardiology",
+      "oncology": "Oncology",
+      "neurology": "Neurology",
+      "pediatrics": "Pediatrics",
+      "universityHospital": "University Hospital",
+      "specializedClinics": "Specialized Clinics",
+      "patientPortal": "Patient Portal",
+      "emergencyCare": "Emergency Care",
+      "medicalLibrary": "Medical Library",
+      "researchArchives": "Research Archives",
+      "facultyPortal": "Faculty Portal",
+      "studentEmail": "Student Email"
+    },
+    "copyright": "© 2024 University Faculty of Medicine. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "accessibility": "Accessibility",
+    "termsOfService": "Terms of Service"
   }
 }

@@ -5,3 +5,6 @@ export { default as LinkBlankIcon } from "./LinkBlank";
 export { default as ResearchIcon } from "./Research";
 export { default as PlacePinIcon } from "./PlacePin";
 export { default as EmailIcon } from "./Email";
+export { default as GlobeIcon } from "./Globe";
+export { default as ShareIcon } from "./Share";
+export { default as RssIcon } from "./Rss";
