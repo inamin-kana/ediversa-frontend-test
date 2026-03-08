@@ -16,7 +16,6 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
     <li className="publicationCard">
       <div className="publicationCard__head">
         <span className="publicationCard__date">{date}</span>
-        {/* <span className="publicationCard__separator"> • </span> */}
         <span className="publicationCard__department">{department}</span>
       </div>
       <h3 className="publicationCard__title">{title}</h3>

@@ -120,7 +120,6 @@
         display: none;
       }
       @include mq-sp {
-        // display: block;
         width: 14px;
         transform: rotate(-45deg);
       }

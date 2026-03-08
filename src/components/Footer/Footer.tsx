@@ -33,7 +33,6 @@ export default function Footer() {
             />
           ))}
         </div>
-        {/* <div className="Footer__divider" aria-hidden="true" /> */}
         <div className="Footer__bottom">
           <p className="Footer__copyright">{t("footer.copyright")}</p>
           <nav className="Footer__legal" aria-label="Legal">
