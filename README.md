@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Ediversa Frontend Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prueba técnica de frontend — Home de una Facultad de Medicina
 
-Currently, two official plugins are available:
+## Información básica
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Stack y librerías utilizadas
 
-## React Compiler
+| Categoría | Tecnología |
+|-----------|------------|
+| **Framework** | React 19 |
+| **Build** | Vite 7 |
+| **Lenguaje** | TypeScript |
+| **Estilos** | SCSS (Sass) con `sass-embedded` |
+| **Formularios** | React Hook Form + Zod (validación) |
+| **Validación** | Zod (con `@hookform/resolvers` para integración) |
+| **Internacionalización** | i18next + react-i18next |
+| **Otros** | normalize.css, Inter (Google Fonts) |
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Comandos
 
-## Expanding the ESLint configuration
+```bash
+# Instalar dependencias
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Desarrollo local
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estructura del proyecto (componentes y archivos)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
 ```
+src/
+├── assets/                 # Recursos estáticos
+│   ├── logo.svg
+│   └── img/                # Imágenes (HeroSection, FeaturedProfessorsSection, InnovatingSection, etc.)
+│
+├── components/             # Componentes reutilizables
+│   ├── ArrowTextLink/      
+│   ├── ButtonPortal/       
+│   ├── ButtonSimple/       
+│   ├── FormField/          # Campo de formulario (label + input + error)
+│   ├── Footer/             # Footer (FooterColumn, SocialLinks)
+│   ├── Header/             
+│   ├── Icons/              # Iconos SVG (Arrow, Email, Globe, LinkBlank, etc.)
+│   ├── ProfessorLinkCard/  
+│   ├── PublicationCard/    
+│   ├── SearchInput/        
+│   └── TitleSection/       
+│
+├── data/                   # Datos estáticos
+│   ├── featuredProfessors.ts
+│   ├── footerLinks.ts
+│   └── publications.ts
+│
+├── locales/                # Textos traducibles (i18n)
+│   └── en/
+│       └── common.json
+│
+├── pages/
+│   └── Home.tsx            # Página principal 
+│
+├── schemas/
+│   └── requestInfoSchema.ts  # Esquema Zod del formulario
+│
+├── sections/               # Secciones de la página (por bloque de contenido)
+│   ├── FeaturedProfessorsSection/
+│   ├── HeroSection/
+│   ├── InnovatingBannerSection/
+│   ├── LatestResearchSection/
+│   └── RequestInfoSection/   # Incluye  (formulario con validación Zod)
+│
+├── styles/                 # Estilos 
+│   ├── global.scss         # Funciones 
+│   └── variables.scss      # Variables (colores, breakpoints etc.)
+│
+├── types/
+│   ├── professor.ts
+│   └── publication.ts
+│
+├── App.tsx                 # Componente raíz (Header, Home, Footer)
+├── i18n.ts                 # Configuración de i18next
+├── index.scss              # Estilos globales, reset, clases comunes 
+├── main.tsx               
+
+```
+---
+
+## Decisiones técnicas
+
+### Organización de componentes
+
+- **Componentes reutilizables** en `components/`: botones, campos de formulario, card, iconos, etc., para evitar duplicación y mejorar la escalabilidad.
+- **Secciones** en `sections/`: cada bloque visible de la página (Hero, Profesores destacados, Últimas investigaciones, Banner, Formulario de solicitud) está en su propia carpeta.
+- **Datos** en `data/`: listas de profesores, publicaciones y enlaces del footer en archivos separados para facilitar el cambio por datos de API.
+- **Textos** en `locales/` con i18n: todos los textos visibles pasan por i18next para futura multiidioma y mantenimiento.
+- **Variables y funciones SCSS** en `styles/variables.scss` y `styles/global.scss`: colores, breakpoints, tamaños base y funciones como `vw()`, `color()` o mixins (`mq-pc`, `mq-sp`) para centralizar la gestión de estilos y facilitar su mantenimiento.
+
+Se utilizaron **React**, **Vite**, **Zod** e **i18n**, tecnologías con las que ya tenía experiencia previa, lo que facilitó un desarrollo más fluido y consistente.
+
+### Enfoque adoptado para el layout
+
+- **Diseño responsive**
+  - Hasta **768px**: ancho de referencia con **vw** para escalar con el viewport; por debajo (móvil) se usan tamaños en **px** fijos.
+   - Breakpoint principal: **767px** (`$break-small` en `variables.scss`).
+- **Mixins de media queries** en `styles/global.scss`:
+  - `mq-pc`: estilos para desktop (min-width > 767px).
+  - `mq-sp`: estilos para móvil (max-width ≤ 767px).
+  Así se separa claramente el estilo de cada vista.
+- **Ancho de secciones**:
+  - Clases comunes `.section` y `.section__inner`: ancho máximo y margin/padding unificados para todas las secciones.
+- **Herramientas de layout**:
+  - Flexbox y Grid para estructuras adaptables.
+  - Colores, tamaños de fuente y anchos de pantalla centralizados en `variables.scss` para mantener coherencia y facilitar cambios.
+
+### Mejoras que implementarías con más tiempo
+
+- **Accesibilidad**: Mejoras adicionales en accesibilidad.
+- **Búsqueda**: implementación real de la búsqueda (actualmente solo UI en el header).
+- **Navegación**: Mejor implementación de la navegación y enlaces del sitio.
+
+### Tiempo aproximado invertido
+
+**Aproximadamente 15 horas.**
+
+---
+
+## Notas adicionales
+
+- En los diseños de referencia había numerosas diferencias de texto entre versión desktop y móvil; se ha unificado el contenido tomando como base la **versión de desktop** en todos los breakpoints.
+
