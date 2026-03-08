@@ -7,14 +7,18 @@ export type { FooterNavLink };
 interface FooterColumnProps {
   titleKey: string;
   links: FooterNavLink[];
+  columnId: string;
 }
 
-export default function FooterColumn({ titleKey, links }: FooterColumnProps) {
+export default function FooterColumn({ titleKey, links, columnId }: FooterColumnProps) {
   const { t } = useTranslation("common");
+  const titleId = `${columnId}-title`;
 
   return (
-    <div className="FooterColumn">
-      <h3 className="FooterColumn__title">{t(titleKey)}</h3>
+    <nav className="FooterColumn" aria-labelledby={titleId}>
+      <h2 id={titleId} className="FooterColumn__title">
+        {t(titleKey)}
+      </h2>
       <ul className="FooterColumn__list">
         {links.map((link) => (
           <li key={link.labelKey} className="FooterColumn__item">
@@ -24,6 +28,6 @@ export default function FooterColumn({ titleKey, links }: FooterColumnProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }

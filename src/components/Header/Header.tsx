@@ -21,7 +21,7 @@ export default function Header() {
         <button
           type="button"
           className="header__hamburger"
-          aria-label={t("header.openMenu")}
+          aria-label={t("header.openHamburgerMenu")}
           aria-expanded="false"
         >
           <span className="header__hamburger-bar" />
@@ -29,7 +29,7 @@ export default function Header() {
           <span className="header__hamburger-bar" />
         </button>
         <div className="header_global-nav">
-          <nav>
+          <nav aria-label={t("header.navAriaLabel")}>
             <ul className="header__nav-list">
               <li className="header__nav-item">
                 <a href="#about">{t("header.nav.about")}</a>

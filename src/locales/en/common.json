@@ -3,6 +3,8 @@
     "title": "UNIVERSITY OF HEALTH",
     "subtitle": "Faculty of Medicine",
     "logoAlt": "logo",
+    "openHamburgerMenu": "Open main menu",
+    "navAriaLabel": "Main navigation",
     "nav": {
       "about": "About",
       "programs": "Programs",

@@ -12,10 +12,13 @@ export default function RequestInfoSection() {
   };
 
   return (
-    <section className="requestInfoSection section">
+    <section
+      className="requestInfoSection section"
+      aria-labelledby="request-info-heading"
+    >
       <div className="requestInfoSection__inner section__inner">
         <div className="requestInfoSection__body">
-          <h2 className="requestInfoSection__title">
+          <h2 id="request-info-heading" className="requestInfoSection__title">
             {t("requestInfoSection.title")}
           </h2>
           <p className="requestInfoSection__description">

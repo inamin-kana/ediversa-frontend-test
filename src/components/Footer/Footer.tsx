@@ -24,9 +24,10 @@ export default function Footer() {
             </p>
             <SocialLinks />
           </div>
-          {footerNavColumns.map((col) => (
+          {footerNavColumns.map((col, index) => (
             <FooterColumn
               key={col.titleKey}
+              columnId={`footer-nav-${index}`}
               titleKey={col.titleKey}
               links={col.links}
             />

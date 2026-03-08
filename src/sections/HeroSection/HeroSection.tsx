@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="HeroSection__inner section__inner">
         <div className="HeroSection__body">
           <span className="HeroSection__label">{t("heroSection.label")}</span>
-          <h2 className="HeroSection__title">
+          <h2 id="hero-section-heading" className="HeroSection__title">
             <Trans
               i18nKey="heroSection.title"
               ns="common"

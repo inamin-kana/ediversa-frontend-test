@@ -9,10 +9,13 @@ export default function InnovatingBannerSection() {
   const { t } = useTranslation("common");
 
   return (
-    <section className="innovatingSection">
+    <section
+      className="innovatingSection"
+      aria-labelledby="innovating-section-heading"
+    >
       <div className="innovatingSection__inner">
         <div className="innovatingSection__body">
-          <h2 className="innovatingSection__title">
+          <h2 id="innovating-section-heading" className="innovatingSection__title">
             {t("innovatingSection.title")}
           </h2>
           <p className="innovatingSection__description pc-only">

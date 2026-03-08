@@ -11,11 +11,13 @@ export default function FeaturedProfessorsSection() {
   return (
     <section
       className="featuredProfessors section"
+      
       aria-labelledby="featured-professors-heading"
     >
       <div className="featuredProfessors__inner section__inner">
         <div className="featuredProfessors__headed">
           <TitleSection
+            titleId="featured-professors-heading"
             title={t("featuredProfessors.title")}
             subtitle={t("featuredProfessors.subtitle")}
           />

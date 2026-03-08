@@ -27,6 +27,7 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
         className="publicationCard__link"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`${t("latestResearch.readFullPaper")}: ${title}`}
       >
         {t("latestResearch.readFullPaper")}
         <span className="publicationCard__linkIcon" aria-hidden="true">

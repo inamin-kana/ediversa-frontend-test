@@ -35,7 +35,7 @@ export default function ProfessorLinkCard({
       </div>
       <span className="professorLinkCard__label">
         {t("featuredProfessors.viewProfile")}
-        <span className="arrow-icon">
+        <span className="arrow-icon" aria-hidden="true">
           <ArrowIcon className="arrowTextLink__icon icon-svg" />
         </span>
       </span>

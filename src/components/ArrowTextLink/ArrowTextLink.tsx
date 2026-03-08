@@ -16,7 +16,7 @@ export default function ArrowTextLink({
   return (
     <a href={href} className={`arrowTextLink ${className}`.trim()} {...rest}>
       {children}
-      <span className="arrow-icon">
+      <span className="arrow-icon" aria-hidden="true">
         <ArrowIcon className="arrowTextLink__icon icon-svg" />
       </span>
     </a>
