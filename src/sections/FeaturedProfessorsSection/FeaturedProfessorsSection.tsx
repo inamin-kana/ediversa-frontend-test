@@ -18,7 +18,6 @@ export default function FeaturedProfessorsSection() {
           <TitleSection
             title={t("featuredProfessors.title")}
             subtitle={t("featuredProfessors.subtitle")}
-            subtitleSp={t("featuredProfessors.subtitleSp")}
           />
           <ArrowTextLink href="#" className="featuredProfessors__viewAll">
             {t("featuredProfessors.textLinkLabel")}

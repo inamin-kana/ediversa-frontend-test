@@ -12,7 +12,9 @@
   }
 
   &:hover .professorLinkCard__image img {
-    transform: scale(1.05);
+    @include mq-pc {
+      transform: scale(1.05);
+    }
   }
 
   .professorLinkCard__image {
@@ -126,7 +128,9 @@
   }
 
   &:hover .professorLinkCard__label {
-    color: color(primary);
+    @include mq-pc {
+      color: color(primary);
+    }
   }
   &:focus {
     outline: none;

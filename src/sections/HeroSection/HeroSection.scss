@@ -71,21 +71,10 @@
     @include mq-pc() {
       max-width: vw(560);
       font-size: vw(18);
+      margin-bottom: vw(32);
     }
     @include mq-sp() {
       font-size: 18px;
-    }
-  }
-
-  .HeroSection__description--pc {
-    @include mq-sp() {
-      display: none;
-    }
-  }
-
-  .HeroSection__description--sp {
-    @include mq-pc() {
-      display: none;
     }
   }
 

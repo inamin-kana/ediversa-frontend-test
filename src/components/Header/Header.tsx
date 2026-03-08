@@ -9,35 +9,49 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__inner">
-        <span className="header__logo">
-          <img src="/src/assets/logo.svg" alt={t("header.logoAlt")} />
-        </span>
-        <div className="header__title-wrapper">
-          <h1 className="header__title">{t("header.title")}</h1>
-          <span className="header__subtitle">{t("header.subtitle")}</span>
-        </div>
-        <nav>
-          <ul className="header__nav-list">
-            <li className="header__nav-item">
-              <a href="#">{t("header.nav.about")}</a>
-            </li>
-            <li className="header__nav-item">
-              <a href="#">{t("header.nav.programs")}</a>
-            </li>
-            <li className="header__nav-item">
-              <a href="#">{t("header.nav.research")}</a>
-            </li>
-            <li className="header__nav-item">
-              <a href="#">{t("header.nav.faculty")}</a>
-            </li>
-            <li className="header__nav-item">
-              <a href="#">{t("header.nav.contact")}</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="header__search-and-portal">
-          <SearchBox />
-          <ButtonPortal />
+        <a href="/" className="header__logo-link">
+          <span className="header__logo">
+            <img src="/src/assets/logo.svg" alt={t("header.logoAlt")} />
+          </span>
+          <div className="header__title-wrapper">
+            <h1 className="header__title">{t("header.title")}</h1>
+            <span className="header__subtitle">{t("header.subtitle")}</span>
+          </div>
+        </a>
+        <button
+          type="button"
+          className="header__hamburger"
+          aria-label={t("header.openMenu")}
+          aria-expanded="false"
+        >
+          <span className="header__hamburger-bar" />
+          <span className="header__hamburger-bar" />
+          <span className="header__hamburger-bar" />
+        </button>
+        <div className="header_global-nav">
+          <nav>
+            <ul className="header__nav-list">
+              <li className="header__nav-item">
+                <a href="#about">{t("header.nav.about")}</a>
+              </li>
+              <li className="header__nav-item">
+                <a href="#programs">{t("header.nav.programs")}</a>
+              </li>
+              <li className="header__nav-item">
+                <a href="#research">{t("header.nav.research")}</a>
+              </li>
+              <li className="header__nav-item">
+                <a href="#faculty">{t("header.nav.faculty")}</a>
+              </li>
+              <li className="header__nav-item">
+                <a href="#contact">{t("header.nav.contact")}</a>
+              </li>
+            </ul>
+          </nav>
+          <div className="header__search-and-portal">
+            <SearchBox />
+            <ButtonPortal />
+          </div>
         </div>
       </div>
     </header>

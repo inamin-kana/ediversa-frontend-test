@@ -54,6 +54,8 @@
   }
 
   &:hover {
-    color: color(primary);
+    @include mq-pc {
+      color: color(primary);
+    }
   }
 }

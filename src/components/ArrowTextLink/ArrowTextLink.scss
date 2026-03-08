@@ -16,9 +16,11 @@
   }
 
   &:hover {
-    opacity: 0.8;
-    .arrow-icon {
-      transform: translateX(3px);
+    @include mq-pc {
+      opacity: 0.8;
+      .arrow-icon {
+        transform: translateX(3px);
+      }
     }
   }
   &:focus {

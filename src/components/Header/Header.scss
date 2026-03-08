@@ -22,6 +22,12 @@
     }
   }
 
+  .header__logo-link {
+    color: color(main);
+    display: flex;
+    align-items: center;
+  }
+
   .header__logo {
     display: inline-block;
     height: stretch;
@@ -73,6 +79,13 @@
     }
   }
 
+  .header_global-nav {
+    display: contents;
+    @include mq-sp {
+      display: block;
+    }
+  }
+
   .header__nav-list {
     list-style: none;
     @include mq-pc {
@@ -94,8 +107,15 @@
       text-decoration: none;
       color: color(text-gray1);
       font-weight: 600;
+      transition: color $base-duration ease;
       @include mq-pc {
         font-size: vw(14);
+      }
+
+      &:hover {
+        @include mq-pc {
+          color: color(primary);
+        }
       }
     }
   }
@@ -109,6 +129,41 @@
     }
     @include mq-sp {
       display: none;
+    }
+  }
+}
+
+/* Hamburger button
+============================================================= */
+.header__hamburger {
+  display: none;
+  background-color: #eee;
+  border: none;
+  @include mq-sp {
+    display: block;
+    width: 18px;
+    height: 12px;
+    position: relative;
+    margin-left: auto;
+  }
+}
+
+.header__hamburger-bar {
+  display: none;
+  @include mq-sp {
+    display: block;
+    background-color: #334155;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:nth-of-type(2) {
+      top: 50%;
+    }
+    &:nth-of-type(3) {
+      top: 100%;
     }
   }
 }

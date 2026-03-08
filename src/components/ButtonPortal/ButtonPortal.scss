@@ -23,7 +23,9 @@
   }
 
   &:hover {
-    opacity: 0.8;
+    @include mq-pc {
+      opacity: 0.8;
+    }
   }
   &:focus {
     outline: none;
