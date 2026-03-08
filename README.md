@@ -34,7 +34,7 @@ npm run dev
 
 ```
 src/
-├── assets/                 # Recursos estáticos
+├── assets/                
 │   ├── logo.svg
 │   └── img/                # Imágenes (HeroSection, FeaturedProfessorsSection, InnovatingSection, etc.)
 │
@@ -91,17 +91,15 @@ src/
 
 ## Decisiones técnicas
 
-### Organización de componentes
-
 - **Componentes reutilizables** en `components/`: botones, campos de formulario, card, iconos, etc., para evitar duplicación y mejorar la escalabilidad.
-- **Secciones** en `sections/`: cada bloque visible de la página (Hero, Profesores destacados, Últimas investigaciones, Banner, Formulario de solicitud) está en su propia carpeta.
+- **Secciones** en `sections/`: cada bloque visible de la página (Hero, Featured Professors, Latest Research & Publications, Banner, Request Information) está en su propia carpeta.
 - **Datos** en `data/`: listas de profesores, publicaciones y enlaces del footer en archivos separados para facilitar el cambio por datos de API.
 - **Textos** en `locales/` con i18n: todos los textos visibles pasan por i18next para futura multiidioma y mantenimiento.
-- **Variables y funciones SCSS** en `styles/variables.scss` y `styles/global.scss`: colores, breakpoints, tamaños base y funciones como `vw()`, `color()` o mixins (`mq-pc`, `mq-sp`) para centralizar la gestión de estilos y facilitar su mantenimiento.
+- **Variables y funciones SCSS** en `styles/variables.scss` y `styles/global.scss`: colores, breakpoints, base size y funciones como `vw()`, `color()` o mixins (`mq-pc`, `mq-sp`) para centralizar la gestión de estilos y facilitar su mantenimiento.
 
-Se utilizaron **React**, **Vite**, **Zod** e **i18n**, tecnologías con las que ya tenía experiencia previa, lo que facilitó un desarrollo más fluido y consistente.
+He utilizado **React**, **Vite**, **Zod** e **i18n**, tecnologías con las que ya tenía experiencia previa, lo que facilitó un desarrollo más fluido y consistente.
 
-### Enfoque adoptado para el layout
+## Enfoque adoptado para el layout
 
 - **Diseño responsive**
   - Hasta **768px**: ancho de referencia con **vw** para escalar con el viewport; por debajo (móvil) se usan tamaños en **px** fijos.
@@ -112,17 +110,17 @@ Se utilizaron **React**, **Vite**, **Zod** e **i18n**, tecnologías con las que 
   Así se separa claramente el estilo de cada vista.
 - **Ancho de secciones**:
   - Clases comunes `.section` y `.section__inner`: ancho máximo y margin/padding unificados para todas las secciones.
-- **Herramientas de layout**:
+- **layout**:
   - Flexbox y Grid para estructuras adaptables.
   - Colores, tamaños de fuente y anchos de pantalla centralizados en `variables.scss` para mantener coherencia y facilitar cambios.
 
-### Mejoras que implementarías con más tiempo
+## Mejoras que implementarías con más tiempo
 
 - **Accesibilidad**: Mejoras adicionales en accesibilidad.
 - **Búsqueda**: implementación real de la búsqueda (actualmente solo UI en el header).
 - **Navegación**: Mejor implementación de la navegación y enlaces del sitio.
 
-### Tiempo aproximado invertido
+## Tiempo aproximado invertido
 
 **Aproximadamente 15 horas.**
 
