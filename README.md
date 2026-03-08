@@ -128,5 +128,5 @@ He utilizado **React**, **Vite**, **Zod** e **i18n**, tecnologías con las que y
 
 ## Notas adicionales
 
-- En los diseños de referencia había numerosas diferencias de texto entre versión desktop y móvil; se ha unificado el contenido tomando como base la **versión de desktop** en todos los breakpoints.
-
+En los diseños de referencia había numerosas diferencias de texto entre versión desktop y móvil; se ha unificado el contenido tomando como base la **versión de desktop** en todos los breakpoints.
+(ej. en la sección "Featured Professors" del diseño móvil, los nombres de las dos mujeres están invertidos respecto al diseño de desktop.)
