@@ -50,7 +50,32 @@
     "addressLabel": "Academic Campus",
     "address": "123 Medical Plaza, University District\nBoston, MA 02115",
     "emailLabel": "General Admissions",
-    "email": "admissions@university.edut\n+1 (617) 555-0198"
+    "email": "admissions@university.edut\n+1 (617) 555-0198",
+    "form": {
+      "labels": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "departmentOfInterest": "Department of Interest",
+        "message": "Your Message"
+      },
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "email": "john.smith@example.com",
+        "departmentOfInterest": "Choose a department...",
+        "message": "Your inquiry..."
+      },
+      "submitButton": "Submit Request",
+      "errors": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailRequired": "Email is required",
+        "invalidEmail": "Invalid email",
+        "departmentRequired": "Please choose a department",
+        "messageMax": "Message must be 1000 characters or less"
+      }
+    }
   },
   "footer": {
     "brandTitle": "Faculty of Med",

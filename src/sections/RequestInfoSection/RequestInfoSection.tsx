@@ -1,9 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { EmailIcon, PlacePinIcon } from "../../components/Icons";
+import type { RequestInfoSchema } from "../../schemas/requestInfoSchema";
+import RequestInfoForm from "./RequestInfoForm";
 import "./RequestInfoSection.scss";
 
 export default function RequestInfoSection() {
   const { t } = useTranslation("common");
+
+  const handleSubmit = (data: RequestInfoSchema) => {
+    console.log(data);
+  };
+
   return (
     <section className="requestInfoSection section">
       <div className="requestInfoSection__inner section__inner">
@@ -43,7 +50,7 @@ export default function RequestInfoSection() {
             </div>
           </dl>
         </div>
-        <div className="form">form</div>
+        <RequestInfoForm onSubmit={handleSubmit} />
       </div>
     </section>
   );
